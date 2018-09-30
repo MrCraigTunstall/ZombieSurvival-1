@@ -1,4 +1,4 @@
--- © Limetric Studios ( www.limetricstudios.com ) -- All rights reserved.
+-- Â© Limetric Studios ( www.limetricstudios.com ) -- All rights reserved.
 -- See LICENSE.txt for license information
 
 AddCSLuaFile()
@@ -14,14 +14,18 @@ if CLIENT then
 end
 
 SWEP.VElements = {
-	["pan"] = { type = "Model", model = "models/weapons/w_fryingpan.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(6.282, 2.484, 0), angle = Angle(0, 180, -90), size = Vector(1, 0.8, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	["pan"] = { type = "Model", model = "models/props_c17/metalPot002a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4.19, 1.572, -7.736), angle = Angle(-95.058, -180, 0), size = Vector(0.901, 0.901, 0.901), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+}
+
+SWEP.WElements = {
+	["pan"] = { type = "Model", model = "models/props_c17/metalPot002a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(3.43, 1.74, -10.311), angle = Angle(-85.32, 55.214, -5.046), size = Vector(1.011, 1.011, 1.011), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
 -- Model paths
 SWEP.Author = "Deluvas"
 SWEP.ViewModel = Model ( "models/weapons/c_crowbar.mdl" )
 SWEP.UseHands = true
-SWEP.WorldModel = Model ( "models/weapons/w_fryingpan.mdl" )
+SWEP.WorldModel = Model ( "models/weapons/w_knife_t.mdl" )
 
 -- Name
 SWEP.PrintName = "Frying Pan"
