@@ -8,7 +8,7 @@ SWEP.Base = "weapon_zs_melee_base"
 
 if CLIENT then
 	SWEP.ShowViewModel = false
-	SWEP.ShowWorldModel = true
+	SWEP.ShowWorldModel = false
 
 	killicon.AddFont( "weapon_zs_fryingpan", "ZSKillicons", "b", Color(255, 255, 255, 255 ) ) 
 end
