@@ -1,24 +1,12 @@
--- © Limetric Studios ( www.limetricstudios.com ) -- All rights reserved.
+-- Â© Limetric Studios ( www.limetricstudios.com ) -- All rights reserved.
 -- See LICENSE.txt for license information
 
 include("shared.lua")
 
 function ENT:Initialize()
-	hook.Add("PreDrawHalos", "CustDrawHalos".. tostring(self), function()
-		if not util.tobool(GetConVarNumber("zs_drawcrateoutline")) then
-			return
-		end
-
-		if not IsValid(MySelf) or MySelf:Team() ~= TEAM_HUMAN or not MySelf:Alive() then
-			return
-		end
-		
-		halo.Add(self:GetEntities(), self.LineColor, 1, 1, 1, true, true)
-	end)
-end
-
-function ENT:OnRemove()
-	hook.Remove("PreDrawHalos", "CustDrawHalos".. tostring(self))
+	if not IsValid(MySelf) or MySelf:Team() ~= TEAM_HUMAN or not MySelf:Alive() then
+		return
+	end
 end
 
 ENT.LineColor = Color(210, 0, 0, 50)
@@ -45,10 +33,10 @@ function ENT:Draw()
 	angle.r = angle.r + 90
 
 	cam.Start3D2D(pos,angle,0.26)
-
+	cam.IgnoreZ(true)
 	--draw.SimpleTextOutlined("Weapons and Supplies", "ArialBoldSeven", 0, -100, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color(0,0,0,255)) --New
 	draw.SimpleTextOutlined("SkillShop", "ArialBoldSeven", 0, -20, Color(255,255,255,200), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color(0,0,0,250)) --New
-
+	
 		
 	--Get list of available weapons the player will most likely receive
 	--local suppliesList = GetBestAvailableWeapons()
@@ -57,8 +45,9 @@ function ENT:Draw()
 		--draw.SimpleTextOutlined(text, "ArialBoldFour", 0, -85, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER,1, Color(0,0,0,255)) --New
 		draw.SimpleTextOutlined(text, "ArialBoldFour", 0, 20, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER,1, Color(0,0,0,250)) --New
 
- 
- 		draw.SimpleTextOutlined("F3 | Salvage weapons for SP!", "ArialBoldFour", 0, 0, Color(255,255,255,250), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER,1, Color(0,0,0,200)) --New
+ 		--not currently implemented
+ 		--draw.SimpleTextOutlined("F3 | Salvage weapons for SP!", "ArialBoldFour", 0, 0, Color(255,255,255,250), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER,1, Color(0,0,0,200)) --New
  
 	cam.End3D2D()
+	cam.IgnoreZ(false)
 end
