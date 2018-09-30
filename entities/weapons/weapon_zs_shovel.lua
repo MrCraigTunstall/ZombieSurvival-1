@@ -20,7 +20,7 @@ SWEP.DamageType = DMG_CLUB
 
 SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.UseHands = true
-SWEP.WorldModel = "models/weapons/w_shovel.mdl"
+SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 
 SWEP.MeleeDamage = 60
 SWEP.MeleeRange = 70
@@ -37,10 +37,12 @@ SWEP.SwingTime = 0.8
 SWEP.SwingHoldType = "melee"
 
 SWEP.VElements = {
-	["shovel"] = { type = "Model", model = "models/weapons/w_shovel.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(3.924, 1.907, 0), angle = Angle(0, 180, 180), size = Vector(0.8, 0.8, 0.8), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	["shovel"] = { type = "Model", model = "models/props_junk/shovel01a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.665, 1.911, -10.257), angle = Angle(-6.478, -180, 2.078), size = Vector(1.146, 1.146, 1.146), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
-SWEP.WElements = {}
+SWEP.WElements = {
+	["shovel"] = { type = "Model", model = "models/props_junk/shovel01a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(6.842, 0.824, -8.353), angle = Angle(-15.356, -180, -0.5), size = Vector(0.88, 0.88, 0.88), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+}
 
 SWEP.ViewModelBoneMods = {}
 
