@@ -1515,3 +1515,7 @@ hook.Add("PlayerDeath", "GraveDiggerHealth", function(victim, inflictor, attacke
 	end
 
 end)
+
+hook.Add("PlayerSpray", "DisablePlayerSpray", function(ply)
+	return !ply:IsAdmin()
+end)
